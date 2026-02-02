@@ -1,16 +1,15 @@
-import logging
+
+
+import logging  # Python built-in logging
 import os
-import sys
 from dataclasses import dataclass
 from typing import Optional
 from enum import Enum
-
 
 from config.settings import LOG_FILE, LOG_FORMAT
 from recognition.recognizer import RecognitionResult
 from database.crud import create_access_log
 from database.models import User
-
 
 class AccessStatus(Enum):
     GRANTED = "ACCESS GRANTED"

@@ -1,13 +1,19 @@
+
 import sys
 import os
 import cv2
 import numpy as np
 import time
 
-# Paket yolu düzeltmesi
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Proje kök dizini
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from config.settings import CAMERA_INDEX, FRAME_WIDTH, FRAME_HEIGHT, FPS
+from config.settings import (
+    CAMERA_INDEX,
+    FRAME_WIDTH,
+    FRAME_HEIGHT,
+    FPS,
+)
 from vision.face_detector import FaceDetector
 from vision.embedding_extractor import EmbeddingExtractor
 from recognition.recognizer import FaceRecognizer

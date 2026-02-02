@@ -1,9 +1,12 @@
 import sys
 import os
 
+# Proje kök dizinini path'a ekle
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from database.db import db_manager
+
+
 
 
 def create_tables() -> None:

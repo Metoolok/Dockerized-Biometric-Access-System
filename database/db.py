@@ -3,7 +3,7 @@ import os
 import threading
 from contextlib import contextmanager
 
-from config.settings import DATABASE_PATH
+from face_access_system.config.settings import DATABASE_PATH
 
 
 class DatabaseManager:

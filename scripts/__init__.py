@@ -1,0 +1,1 @@
+from face_access_system.database.db import db_manager

@@ -1,24 +1,18 @@
 import sys
 import os
 import time
+
+# Proje kök dizinini path'a ekle
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import cv2
 import numpy as np
 
-
-# Dosyanın konumundan bağımsız olarak kök dizini (PythonProject) sisteme tanıtır.
-current_file = os.path.abspath(__file__)
-# scripts -> face_access_system -> PythonProject (3 basamak yukarı)
-project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_file)))
-
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
-# --------------------------------------------------
-
-from face_access_system.config.settings import CAMERA_INDEX, FRAME_WIDTH, FRAME_HEIGHT
-from face_access_system.vision.face_detector import FaceDetector
-from face_access_system.vision.embedding_extractor import EmbeddingExtractor
-from face_access_system.database.crud import create_user, get_all_users
-from face_access_system.scripts.init_db import create_tables
+from config.settings import CAMERA_INDEX, FRAME_WIDTH, FRAME_HEIGHT
+from vision.face_detector import FaceDetector
+from vision.embedding_extractor import EmbeddingExtractor
+from database.crud import create_user, get_all_users
+from scripts.init_db import create_tables
 
 def get_user_name() -> str:
     print("\n" + "=" * 50)

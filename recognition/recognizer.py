@@ -2,10 +2,13 @@ from dataclasses import dataclass
 from typing import Optional, List
 import numpy as np
 
-from config.settings import SIMILARITY_THRESHOLD
-from recognition.similarity import compute_similarity, SimilarityMethod
-from database.crud import get_all_users
-from database.models import User
+from face_access_system.config.settings import SIMILARITY_THRESHOLD
+from face_access_system.recognition.similarity import (
+    compute_similarity,
+    SimilarityMethod,
+)
+from face_access_system.database.crud import get_all_users
+from face_access_system.database.models import User
 
 
 @dataclass

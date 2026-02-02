@@ -8,7 +8,10 @@ try:
 except ImportError:
     DLIB_AVAILABLE = False
 
-from config.settings import DLIB_PREDICTOR_PATH, EMBEDDING_DIM
+from face_access_system.config.settings import (
+    DLIB_PREDICTOR_PATH,
+    EMBEDDING_DIM,
+)
 
 FaceROI = Tuple[np.ndarray, Tuple[int, int, int, int]]
 

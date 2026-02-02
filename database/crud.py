@@ -2,8 +2,8 @@ from datetime import datetime
 from typing import Optional, List
 import numpy as np
 
-from database.db import db_manager
-from database.models import User, AccessLog
+from face_access_system.database.db import db_manager
+from face_access_system.database.models import User, AccessLog
 
 
 def _embedding_to_blob(embedding: np.ndarray) -> bytes:

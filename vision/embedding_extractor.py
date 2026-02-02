@@ -7,7 +7,10 @@ try:
 except ImportError:
     DLIB_AVAILABLE = False
 
-from config.settings import DLIB_RECOGNITION_MODEL_PATH, EMBEDDING_DIM
+from face_access_system.config.settings import (
+    DLIB_RECOGNITION_MODEL_PATH,
+    EMBEDDING_DIM,
+)
 
 
 class EmbeddingExtractor:
