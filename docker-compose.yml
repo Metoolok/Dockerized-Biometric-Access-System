@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  face-system:
+    build: .
+    container_name: biometric_system
+    # Kamerayı içeriye bağla
+    devices:
+      - "/dev/video0:/dev/video0"
+    # Verilerin (DB ve Log) konteyner silinse bile silinmemesi için
+    volumes:
+      - ./data:/app/data
+    # X11 yönlendirmesi (Docker içindeki OpenCV penceresini Ubuntu ekranında görmek için)
+    environment:
+      - DISPLAY=${DISPLAY}
+    network_mode: "host"
